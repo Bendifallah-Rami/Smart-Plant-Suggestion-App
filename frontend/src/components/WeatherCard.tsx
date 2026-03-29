@@ -52,44 +52,46 @@ const WeatherCard = ({ city, weatherData }: WeatherCardProps) => {
       </div>
 
       {/* Big weather icon */}
-      <div className="flex justify-center my-4 relative z-10">
-        <WeatherIcon />
+      <div className="flex justify-center my-6 md:my-8 relative z-10">
+        <div className="scale-75 md:scale-110">
+          <WeatherIcon />
+        </div>
       </div>
 
       {/* Title */}
-      <div className="flex items-center gap-2 mb-6 relative z-10">
-        <Wind size={28} />
-        <span className="text-3xl font-bold tracking-tight">Weather Analysis</span>
+      <div className="flex items-center gap-3 mb-6 relative z-10">
+        <Wind size={24} className="md:w-7 md:h-7" />
+        <span className="text-2xl md:text-3xl font-bold tracking-tight">Weather Analysis</span>
       </div>
 
-      <hr className="border-[#2D402D]/20 mb-6 relative z-10" />
+      <hr className="border-[#2D402D]/10 mb-8 relative z-10" />
 
       {/* Stats */}
-      <div className="flex flex-wrap lg:flex-nowrap justify-between items-center gap-6 relative z-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:justify-between items-center gap-8 md:gap-10 relative z-10">
         {/* Temperature */}
-        <div className="flex items-center gap-4 border-r border-[#2D402D]/20 pr-6 shrink-0">
-          <Thermometer size={36} className="text-red-500" />
+        <div className="flex items-center gap-4 lg:border-r border-[#2D402D]/10 lg:pr-8 shrink-0">
+          <Thermometer size={32} className="text-red-500 md:w-9 md:h-9" />
           <div>
-            <p className="text-5xl font-bold">{temp !== null ? `${temp}°` : "--"}</p>
-            <p className="text-sm opacity-70 font-bold">Temperature (°C)</p>
+            <p className="text-4xl md:text-5xl font-bold">{temp !== null ? `${temp}°` : "--"}</p>
+            <p className="text-xs md:text-sm text-[#2D402D]/60 font-bold uppercase tracking-wider">Temp (°C)</p>
           </div>
         </div>
 
         {/* Humidity */}
-        <div className="flex items-center gap-4 border-r border-[#2D402D]/20 pr-6 shrink-0">
-          <Droplets size={36} className="text-blue-500" />
+        <div className="flex items-center gap-4 lg:border-r border-[#2D402D]/10 lg:pr-8 shrink-0">
+          <Droplets size={32} className="text-blue-500 md:w-9 md:h-9" />
           <div>
-            <p className="text-4xl font-bold">{humidity !== null ? `${humidity}%` : "--"}</p>
-            <p className="text-sm opacity-70 font-bold">Humidity</p>
+            <p className="text-4xl md:text-5xl font-bold">{humidity !== null ? `${humidity}%` : "--"}</p>
+            <p className="text-xs md:text-sm text-[#2D402D]/60 font-bold uppercase tracking-wider">Humidity</p>
           </div>
         </div>
 
         {/* Season */}
-        <div className="flex items-center gap-3">
-          <span className="text-5xl">{meta.icon}</span>
+        <div className="flex items-center gap-4">
+          <span className="text-4xl md:text-5xl">{meta.icon}</span>
           <div>
-            <p className="text-2xl font-bold">{meta.label}</p>
-            <p className="text-sm opacity-70">Current season</p>
+            <p className="text-xl md:text-2xl font-bold">{meta.label}</p>
+            <p className="text-xs md:text-sm text-[#2D402D]/60 uppercase tracking-wider font-bold">Current season</p>
           </div>
         </div>
       </div>

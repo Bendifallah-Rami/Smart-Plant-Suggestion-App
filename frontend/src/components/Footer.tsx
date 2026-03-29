@@ -14,74 +14,74 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#A7B29F] py-16 px-6 mt-20 border-t border-[#2D402D]/10">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-[#2D402D]">
-        <div className="flex flex-col gap-5">
+    <footer className="bg-[#A7B29F] py-12 md:py-16 px-6 mt-16 md:mt-20 border-t border-[#2D402D]/10">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 text-[#2D402D]">
+        <div className="flex flex-col items-center sm:items-start gap-5">
           <div className="flex items-center gap-3">
             <Leaf 
-              size={35} 
+              size={32} 
               className="text-[#2D402D]" 
               fill="#6B8E23" 
             />
             
-            <h2 className="text-3xl font-serif font-bold tracking-tighter uppercase text-[#2D402D]">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold tracking-tighter uppercase text-[#2D402D]">
               GREENGUIDE
             </h2>
           </div>
-          <p className="text-lg leading-relaxed max-w-[300px] font-serif opacity-90">
+          <p className="text-base md:text-lg leading-relaxed max-w-[300px] font-serif opacity-90 text-center sm:text-left">
             Helping you choose the right plants the smart way.
           </p>
         </div>
 
-        <div className="flex flex-col gap-5">
-          <h4 className="text-xl font-bold font-serif uppercase tracking-wider">
+        <div className="flex flex-col items-center sm:items-start gap-5">
+          <h4 className="text-lg md:text-xl font-bold font-serif uppercase tracking-wider underline decoration-[#2D402D]/20 underline-offset-8">
             Navigation
           </h4>
-          <nav className="flex flex-col gap-3 uppercase text-sm font-bold">
+          <nav className="flex flex-col items-center sm:items-start gap-3 uppercase text-xs md:text-sm font-bold">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-left hover:text-white transition-colors uppercase"
+              className="hover:text-white transition-all uppercase tracking-widest"
             >
               HOME
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-left hover:text-white transition-colors uppercase"
+              className="hover:text-white transition-all uppercase tracking-widest"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("plants")}
-              className="text-left hover:text-white transition-colors uppercase"
+              className="hover:text-white transition-all uppercase tracking-widest"
             >
               Explore plants
             </button>
             <button
               onClick={() => scrollToSection("weather")}
-              className="text-left hover:text-white transition-colors uppercase"
+              className="hover:text-white transition-all uppercase tracking-widest"
             >
               Weather Analysis
             </button>
 
             <button
               onClick={() => scrollToSection("ai-assistant")}
-              className="text-left hover:text-white transition-colors uppercase"
+              className="hover:text-white transition-all uppercase tracking-widest"
             >
               AI Assistant
             </button>
           </nav>
         </div>
 
-        <div className="flex flex-col gap-5">
-          <h4 className="text-xl font-bold font-serif uppercase tracking-wider">
-            Information
+        <div className="flex flex-col items-center sm:items-start gap-5 sm:col-span-2 lg:col-span-1">
+          <h4 className="text-lg md:text-xl font-bold font-serif uppercase tracking-wider underline decoration-[#2D402D]/20 underline-offset-8">
+            Contact Us
           </h4>
-          <div className="flex flex-col gap-3 text-md font-serif">
-            <span className="font-bold">+213567478930</span>
-            <a href="mailto:Greenguidell@gmail.com" className="hover:underline">
+          <div className="flex flex-col items-center sm:items-start gap-3 text-sm md:text-base font-serif">
+            <span className="font-bold text-lg">+213 567 478 930</span>
+            <a href="mailto:Greenguidell@gmail.com" className="hover:text-white transition-colors">
               Greenguidell@gmail.com
             </a>
-            <span>450, Alger, Algiers.</span>
+            <span className="opacity-80">450, Alger, Algiers.</span>
           </div>
         </div>
       </div>
